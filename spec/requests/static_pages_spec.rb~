@@ -1,0 +1,21 @@
+require 'spec_helper'
+
+describe "Static Pages" do
+  describe "Home page" do
+
+    it "should have the h1 'Sample App'" do
+      visit root_path
+      expect(page).to have_content('Ruby on Rails')
+    end
+
+    it "should have the base title" do
+      visit root_path
+      expect(page).to have_title("Ruby on Rails")
+    end
+
+    it "should not have a custom page title" do
+      visit root_path
+      expect(page).not_to have_title('| Home')
+    end
+  end
+end

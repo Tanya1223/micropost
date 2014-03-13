@@ -1,0 +1,8 @@
+<% provide(:title, "Редактирование") %>
+<h1>Редактирование профиля</h1>
+
+<%= render 'form' %>
+<div><%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails">Сменить</a><br><br><br><br><br>
+  <%= link_to "Назад", user_path %>
+</div>
